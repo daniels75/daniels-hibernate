@@ -139,6 +139,7 @@
             <artifactId>commons-beanutils</artifactId>
             <version>${commons.beanutils.version}</version>
         </dependency>
+        
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
@@ -154,7 +155,21 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-        </dependency>  
+        </dependency> 
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+            <optional>true</optional>
+        </dependency>        
+        
+        
+         
          <dependency>
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
@@ -226,11 +241,7 @@
             <artifactId>commons-lang</artifactId>
             <version>${commons.lang.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-core</artifactId>
-            <version>${spring.security.version}</version>
-        </dependency>
+       
 
 
 
@@ -285,12 +296,7 @@
             <artifactId>${jdbc.artifactId}</artifactId>
             <version>${jdbc.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <version>${spring.version}</version>
-            <optional>true</optional>
-        </dependency>		
+		
 		
     </dependencies>
 	
@@ -312,6 +318,12 @@
         <jdbc.password>wodna33</jdbc.password>
         <jdbc.validationQuery><![CDATA[SELECT 1 + 1]]></jdbc.validationQuery>
 
+		
+		<hibernate.connection.driver_class>com.mysql.jdbc.Driver</hibernate.connection.driver_class>
+		<hibernate.connection.url><![CDATA[jdbc:mysql://localhost/danielsjpa?createDatabaseIfNotExist=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true]]></hibernate.connection.url>
+		<hibernate.connection.username>root</hibernate.connection.username>
+		<hibernate.connection.password>wodna33</hibernate.connection.password>		
+		
         <cargo.container>tomcat7x</cargo.container>
         <cargo.container.url>
             http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.47/bin/apache-tomcat-7.0.47.zip
